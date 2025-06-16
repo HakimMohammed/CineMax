@@ -1,10 +1,8 @@
-// import { LucideProps } from "lucide-react";
-// import { ForwardRefExoticComponent, RefAttributes } from "react";
+
 
 export interface Link {
     name: string;
     path: string;
-    // icon: ForwardRefExoticComponent<LucideProps & RefAttributes<SVGSVGElement>>;
 }
 
 export interface Trailer {
