@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { links } from "@/data/links";
 import Link from "next/link";
 import { MenuIcon, SearchIcon, Ticket, XIcon } from "lucide-react";
-import { Button } from "./ui/button";
 import Image from "next/image";
 import { useClerk, UserButton, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
@@ -20,9 +19,9 @@ const NavigationBar = () => {
       {/* Logo and Title */}
       <Link href="/" className="max-md:flex-1 flex items-center gap-1">
         <Image
-          src="/assets/logo-transparent.png"
-          alt="CineMax Logo"
-          width={100}
+          src="/assets/logo.svg"
+          alt="QuickShow"
+          width={150}
           height={100}
           className="object-cover"
         />
@@ -68,12 +67,12 @@ const NavigationBar = () => {
             </UserButton.MenuItems>
           </UserButton>
         ) : (
-          <Button
+          <button
             onClick={() => openSignIn()}
-            className="px-4 py-1 sm:px-7 sm:py-2 transition rounded-full font-medium cursor-pointer"
+            className="px-4 py-1 sm:px-7 sm:py-2 bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer"
           >
             Login
-          </Button>
+          </button>
         )}
       </div>
 

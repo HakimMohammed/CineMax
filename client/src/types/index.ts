@@ -1,48 +1,36 @@
-
-
-export interface Link {
+export type Link = {
     name: string;
     path: string;
 }
 
-export interface Trailer {
-    image: string;
-    videoUrl: string;
-}
+export type Cast = {
+  name: string;
+  profile_path: string;
+};
 
-export interface Actor {
-    name: string;
-    profilePath: string;
-}
+export type Genre = {
+  id: number;
+  name: string;
+};
 
-export interface Genre {
-    id: number;
-    name: string;
-}
+export type Trailer = {
+  image: string;
+  videoUrl: string;
+};
 
-export interface Show {
-    _id: string;
-    id: string;
-    title: string;
-    overview: string;
-    posterPath: string;
-    backdropPath: string;
-    genres: Genre[];
-    cast: Actor[];
-    releaseDate: string;
-    originalLanguage: string;
-    tagline: string;
-    averageRating: number;
-    voteCount: number;
-    runtime: number;
-}
-
-export interface User {
-    _id: string;
-    username: string;
-}
-
-export interface Booking {
-    _id: string;
-    showId: string;
-}
+export type Show = {
+  _id: string;
+  id: number;
+  title: string;
+  overview: string;
+  poster_path: string;
+  backdrop_path: string;
+  genres: Genre[];
+  casts: Cast[];
+  release_date: string;
+  original_language: string;
+  tagline: string;
+  vote_average: number;
+  vote_count: number;
+  runtime: number;
+};

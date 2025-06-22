@@ -5,7 +5,7 @@ const UserLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <div>
       <NavigationBar />
-      <main>{children}</main>
+      <div>{children}</div>
       <Footer />
     </div>
   );

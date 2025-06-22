@@ -9,7 +9,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "CineMax",
+  title: "QuickShow",
   description: "Get your ticket to the movies",
 };
 
@@ -21,7 +21,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${outfit.variable} antialiased dark`}>
+        <head>
+          <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+        </head>
+        <body className={`${outfit.variable} antialiased`}>
           {children}
         </body>
       </html>
